@@ -46,28 +46,30 @@ First you need this two file:
 
 execute the process using jupyter-notebook:
 
-   # Create the outputs directory to avoid permission issue
-   mkdir /outputs
+    # Create the outputs directory to avoid permission issue
+    mkdir /outputs
 
-   # start jupyter-notebook
-   jupyter-notebook
+    # start jupyter-notebook
+    jupyter-notebook
   
-   # extract Jupyter Notebook URL in output 
-   example: http://127.0.0.1:8888/?token=7bc6f1e07e131a994f24498c4677413274e94c77784657d6
+    # extract Jupyter Notebook URL in output 
+    example: http://127.0.0.1:8888/?token=7bc6f1e07e131a994f24498c4677413274e94c77784657d6
 
-   # open the url on a browser and select "NDVIMultiSensor.ipynb" file
+    # open the url on a browser and select "NDVIMultiSensor.ipynb" file
 
-   # edit the first cell to point to the S2FILE
+    # edit the first cell to point to the S2FILE 
 
-   # execute the notebook
+    # execute the notebook
     
 The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within /outputs
 
 ### Execute using papermill (batch mode)
 
-To execute the process using papermill, you need this two file:
+First, you need this two file:
 * The jupyter Notebook (e.g. [NDVIMultiSensor.ipynb](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/NDVIMultiSensor.ipynb))
 * The conda environement file (e.g. [environment.yml](https://github.com/Geomatys/Testbed16/blob/master/application-packages/NDVIMultiSensor/binder/environment.yml))
+
+execute the notbook with papermill:
 
     # Work directory is current directory 
     export WORKDIR=`pwd`
