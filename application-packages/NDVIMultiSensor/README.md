@@ -44,20 +44,20 @@ To execute the process using jupyter-notebook, you need this two file:
 * The jupyter Notebook (e.g. [NDVIMultiSensor.ipynb](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/NDVIMultiSensor.ipynb))
 * The conda environement file (e.g. [environment.yml](https://github.com/Geomatys/Testbed16/blob/master/application-packages/NDVIMultiSensor/binder/environment.yml))
 
-    # Create the outputs directory to avoid permission issue
-    mkdir /outputs
+   # Create the outputs directory to avoid permission issue
+   mkdir /outputs
 
-    # start jupyter-notebook
-    jupyter-notebook
+   # start jupyter-notebook
+   jupyter-notebook
   
-    # extract Jupyter Notebook URL in output 
-    example: http://127.0.0.1:8888/?token=7bc6f1e07e131a994f24498c4677413274e94c77784657d6
+   # extract Jupyter Notebook URL in output 
+   example: http://127.0.0.1:8888/?token=7bc6f1e07e131a994f24498c4677413274e94c77784657d6
 
-    # open the url on a browser and select "NDVIMultiSensor.ipynb" file
+   # open the url on a browser and select "NDVIMultiSensor.ipynb" file
 
-    # edit the first cell to point to the S2FILE
+   # edit the first cell to point to the S2FILE
 
-    # execute the notebook
+   # execute the notebook
     
 The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within /outputs
 
@@ -222,6 +222,7 @@ The *Location* property indicated the url to job status :
     curl -X GET "${ADES_WPS_URL}/processes/NDVIMultiSensor/jobs/0ee6840c-61d1-4fca-b231-82cd01249f1d"
 
 the answer should be :
+
     {"status":"succeeded","message":"Process completed.","jobId":"00d2a55c-3193-471e-bbbe-937a75527ce6"}
 
     # Once the status is in success (i.e. {"status":"succeeded"}), you can get the result get the result of the job
