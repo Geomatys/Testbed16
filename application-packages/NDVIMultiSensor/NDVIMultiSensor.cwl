@@ -10,7 +10,7 @@
     "inputs": {
         "files": {
             "inputBinding": {
-                "position": 1,
+                "position": 1
             },
             "type": {
                 "type": "array",

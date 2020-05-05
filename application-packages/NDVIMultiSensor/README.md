@@ -85,8 +85,8 @@ The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within $
 ### Execute using cwl-runner
 
 To execute the process using cwl-runner, you need two files:
-* The process workflow (e.g. [NDVIMultiSensor.cwl](https://raw.githubusercontent.com/Geomatys/Testbed14/master/application-packages/NDVIMultiSensor/NDVIMultiSensor.cwl))
-* The parameters file which contains the list of input images to be processed (e.g. [NDVIMultiSensor_CWL_params.json](https://raw.githubusercontent.com/Geomatys/Testbed14/master/application-packages/NDVIMultiSensor/NDVIMultiSensor_CWL_params.json))
+* The process workflow (e.g. [NDVIMultiSensor.cwl](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/NDVIMultiSensor.cwl))
+* The parameters file which contains the list of input images to be processed (e.g. [NDVIMultiSensor_CWL_params.json](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/NDVIMultiSensor_CWL_params.json))
 
 The NDVIMultiSensor_CWL_params.json references the input files to process.
 
