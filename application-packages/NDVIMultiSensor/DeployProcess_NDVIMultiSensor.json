@@ -7,7 +7,7 @@
                 "offering": {
                     "code": "http://www.opengis.net/eoc/applicationContext/cwl",
                     "content": {
-                        "href": "file:///home/guilhem/Bureau/testbed16/NDVIMultiSensor-multi/NDVIMultiSensor.cwl"
+                        "href": "https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/NDVIMultiSensor.cwl"
                     }
                 }
             },
@@ -63,7 +63,7 @@
     },
     "immediateDeployment": true,
     "executionUnit": [{
-            "href": "testbed16-nb-test-multi:latest"
+            "href": "images.geomatys.com/tb16/ndvims:latest"
         }],
     "deploymentProfileName": "http://www.opengis.net/profiles/eoc/dockerizedApplication"
 }
