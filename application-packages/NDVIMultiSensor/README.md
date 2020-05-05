@@ -40,9 +40,11 @@ In the following we suppose that the working directory contains the images to pr
 
 ### Execute using jupyter-notebook (interactive mode)
 
-To execute the process using jupyter-notebook, you need this two file:
+First you need this two file:
 * The jupyter Notebook (e.g. [NDVIMultiSensor.ipynb](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/NDVIMultiSensor.ipynb))
 * The conda environement file (e.g. [environment.yml](https://github.com/Geomatys/Testbed16/blob/master/application-packages/NDVIMultiSensor/binder/environment.yml))
+
+execute the process using jupyter-notebook:
 
    # Create the outputs directory to avoid permission issue
    mkdir /outputs
@@ -225,10 +227,12 @@ the answer should be :
 
     {"status":"succeeded","message":"Process completed.","jobId":"00d2a55c-3193-471e-bbbe-937a75527ce6"}
 
-    # Once the status is in success (i.e. {"status":"succeeded"}), you can get the result get the result of the job
+Once the status is in success (i.e. {"status":"succeeded"}), you can get the result get the result of the job:
+
     curl -X GET "${ADES_WPS_URL}/processes/NDVIMultiSensor/jobs/0ee6840c-61d1-4fca-b231-82cd01249f1d/result"
 
 the answer should be :
+
     {"outputs":[{"id":"output","href":"http://localhost:8180/examind/WS/wps/default/products/00d2a55c-3193-471e-bbbe-937a75527ce6-results/7803f8c5-f2bb-403f-b9c2-dd857703a87a.tif"}]}
 
     
