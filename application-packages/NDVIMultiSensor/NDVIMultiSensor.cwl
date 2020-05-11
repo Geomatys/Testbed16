@@ -21,7 +21,7 @@
     "outputs": {
         "output": {
             "outputBinding": {
-                "glob": "*.tif"
+                "glob": "./outputs/*.tif"
             },
             "type": {
                 "type": "array",

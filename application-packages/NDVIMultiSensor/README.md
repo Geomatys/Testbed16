@@ -46,9 +46,6 @@ First you need this two file:
 
 execute the process using jupyter-notebook:
 
-    # Create the outputs directory to avoid permission issue
-    mkdir /outputs
-
     # start jupyter-notebook
     jupyter-notebook
   
@@ -61,7 +58,7 @@ execute the process using jupyter-notebook:
 
     # execute the notebook
     
-The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within /outputs
+The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within ${HOME_DIR}/outputs
 
 ### Execute using papermill (batch mode)
 
@@ -73,9 +70,6 @@ execute the notbook with papermill:
 
     # Work directory is current directory 
     export WORKDIR=`pwd`
-
-    # Create the outputs directory to avoid permission issue
-    mkdir /outputs
 
     # The file to process is located under ${WORKDIR}
     export S2FILE=S2A_MSIL1C_20180610T154901_N0206_R054_T18TXR_20180610T193029.SAFE.zip
@@ -89,7 +83,7 @@ execute the notbook with papermill:
 	- ${WORKDIR}/${S2FILE}
     "
 
-The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within /outputs
+The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within ${HOME_DIR}/outputs
 
 ### Execute using docker only
 
@@ -107,7 +101,7 @@ To execute the process using directly docker:
     export S2FILE=S2A_MSIL1C_20180610T154901_N0206_R054_T18TXR_20180610T193029.SAFE.zip
 
     # start interactive Jupyter Notebook
-    docker run -v ${WORKDIR}/${S2FILE}:/${S2FILE}:/${S2FILE} -v ${WORKDIR}:/outputs -p 8888:8888 images.geomatys.com/tb16/ndvims:latest
+    docker run -v ${WORKDIR}/${S2FILE}:/${S2FILE} -v ${WORKDIR}/outputs:/home/guilhem/outputs -p 8888:8888 images.geomatys.com/tb16/ndvims:latest
     
     # extract Jupyter Notebook URL in docker output 
     example: http://127.0.0.1:8888/?token=7bc6f1e07e131a994f24498c4677413274e94c77784657d6
@@ -132,7 +126,7 @@ To execute the process in batch mode using directly docker:
     export S2FILE=S2A_MSIL1C_20180610T154901_N0206_R054_T18TXR_20180610T193029.SAFE.zip
 
     # execute the notebook call the script run.sh
-    docker run -v ${WORKDIR}/${S2FILE}:/${S2FILE}:/${S2FILE} -v ${WORKDIR}:/outputs images.geomatys.com/tb16/ndvims:latest ./run.sh  NDVIMultiSensor.ipynb out.ipynb /${S2FILE}
+    docker run -v ${WORKDIR}/${S2FILE}:/${S2FILE} -v ${WORKDIR}/outputs:/home/guilhem/outputs images.geomatys.com/tb16/ndvims:latest ./run.sh  NDVIMultiSensor.ipynb out.ipynb /${S2FILE}
 
 The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within ${WORKDIR}/outputs
 
