@@ -134,7 +134,7 @@ The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within $
 
 To execute the process using cwl-runner, you need two files:
 * The process workflow (e.g. [NDVIMultiSensor.cwl](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/NDVIMultiSensor.cwl))
-* The parameters file which contains the list of input images to be processed (e.g. [NDVIMultiSensor_CWL_params.json](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/NDVIMultiSensor_CWL_params.json))
+* The parameters file which contains the list of input images to be processed (e.g. [NDVIMultiSensor_CWL_params.json](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/examples/NDVIMultiSensor_CWL_params.json))
 
 The NDVIMultiSensor_CWL_params.json references the input files to process.
 
@@ -155,8 +155,8 @@ The result (e.g. b98b9e16-7d29-42d7-87da-56347f046858.tif) is available within $
 ### Deploy and execute on ADES
 
 To execute the process using papermill, you need this two file:
-* The deploy request (e.g. [DeployProcess_NDVIMultiSensor.json](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/DeployProcess_NDVIMultiSensor.json))
-* The execute request (e.g. [Execute_NDVIMultiSensor_ADES.json](https://github.com/Geomatys/Testbed16/blob/master/application-packages/NDVIMultiSensor/Execute_NDVIMultiSensor_ADES.json))
+* The deploy request (e.g. [DeployProcess_NDVIMultiSensor.json](https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIMultiSensor/examples/DeployProcess_NDVIMultiSensor.json))
+* The execute request (e.g. [Execute_NDVIMultiSensor_ADES.json](https://github.com/Geomatys/Testbed16/blob/master/application-packages/NDVIMultiSensor/examples/Execute_NDVIMultiSensor_ADES.json))
 
 #### Deploy NDVIMultiSensor application package
 
