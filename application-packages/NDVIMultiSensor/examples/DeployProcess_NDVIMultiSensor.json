@@ -17,14 +17,6 @@
                 {
                     "id": "files",
                     "title": "Input Image",
-                    "formats": [
-                        {
-                            "mimeType": "application/zip",
-                            "default": true
-                        },{
-                            "mimeType": "application/x-hdf"
-                        }
-                    ],
                     "minOccurs": "1",
                     "maxOccurs": "1",
                     "additionalParameters": [
@@ -37,19 +29,31 @@
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "input": {
+                        "formats": [
+                            {
+                                "mimeType": "application/zip",
+                                "default": true
+                            }, {
+                                "mimeType": "application/x-hdf"
+                            }
+                        ]
+                    }
                 }
             ],
             "outputs": [
                 {
                     "id": "output",
                     "title": "NDVI Images",
-                    "formats": [
-                        {
-                            "mimeType": "image/tiff",
-                            "default": true
-                        }
-                    ]
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "image/tiff",
+                                "default": true
+                            }
+                        ]
+                    }
                 }
             ]
         },
