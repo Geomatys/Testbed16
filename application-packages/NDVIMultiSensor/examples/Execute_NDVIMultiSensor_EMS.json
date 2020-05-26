@@ -1,0 +1,46 @@
+{
+    "inputs": [
+        {
+            "id": "StartDate",
+            "input": {
+                "dataType": {
+                    "name": "date"
+                },
+                "value": "2016-05-05T04:11:00Z"
+            }
+        },
+        {
+            "id": "aoi",
+            "input": {
+                "bbox": [120,-30,155,-10],
+                "crs": "EPSG:4326"
+            }
+        },
+        {
+            "id": "collection",
+            "input": {
+                "dataType": {
+                    "name": "string"
+                },
+                "value":  "urn:ogc:def:EOP:VITO:PROBAV_P_V001"
+            }
+        },
+        {
+            "id": "EndDate",
+            "input": {
+                "dataType": {
+                    "name": "date"
+                },
+                "value": "2016-05-06T00:00:00Z"
+            }
+        }
+    ],
+    "outputs": [
+        {
+            "id": "output",
+            "transmissionMode": "reference"
+        }
+    ],
+    "mode": "async",
+    "response": "document"
+}
