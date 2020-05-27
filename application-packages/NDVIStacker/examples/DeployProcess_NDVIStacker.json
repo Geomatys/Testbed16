@@ -1,0 +1,60 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "NDVIMultiSensor",
+            "title": "NDVIMultiSensor",
+            "owsContext": {
+                "offering": {
+                    "code": "http://www.opengis.net/eoc/applicationContext/cwl",
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIStacker/NDVIStacker.cwl"
+                    }
+                }
+            },
+            "abstract": "Normalized Difference Vegetation Index (NDVI) from an input list of satellite images.",
+            "keywords": ["NDVI"],
+            "inputs": [
+                {
+                    "id": "files",
+                    "title": "Input Image",
+                    "minOccurs": "1",
+                    "maxOccurs": "unbounded",
+                    "input": {
+                        "formats": [
+                            {
+                                "mimeType": "image/tiff",
+                                "default": true
+                            }
+                        ]
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "id": "output",
+                    "title": "NDVI Images",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "image/tiff",
+                                "default": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [{
+            "href": "images.geomatys.com/tb16/ndvis:latest"
+        }],
+    "deploymentProfileName": "http://www.opengis.net/profiles/eoc/dockerizedApplication"
+}
