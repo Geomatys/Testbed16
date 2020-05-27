@@ -12,6 +12,7 @@ dependencies:
   - gdal
   - jupyter_client
   - jupyterlab
+  - matplotlib
   - pip
   - pip:
     - papermill
