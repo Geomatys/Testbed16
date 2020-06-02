@@ -1,8 +1,8 @@
 {
     "processDescription": {
         "process": {
-            "id": "NDVIMultiSensor",
-            "title": "NDVIMultiSensor",
+            "id": "NDVIStacker",
+            "title": "NDVIStacker",
             "owsContext": {
                 "offering": {
                     "code": "http://www.opengis.net/eoc/applicationContext/cwl",
