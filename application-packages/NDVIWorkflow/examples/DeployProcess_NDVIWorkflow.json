@@ -1,0 +1,56 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "NDVIWorkflow",
+            "title": "Multi Sensor NDVI Workflow",
+            "owsContext": {
+                "offering": {
+                    "code": "http://www.opengis.net/eoc/applicationContext/cwl",
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIWorkflow/NDVIWorkflow.cwl"
+                    }
+                }
+            },
+            "abstract": "Workflow Multi Sensor / NDVI Stacker",
+            "keywords": ["NDVI"],
+            "inputs": [{
+                    "id": "image-s2",
+                    "title": "S2 Input Image",
+                    "input": {
+                        "formats": [{
+                                "mimeType": "application/zip",
+                                "default": true
+                            }]
+                    },
+                    "minOccurs": "1",
+                    "maxOccurs": "unbounded"
+                }
+            ],
+            "outputs": [{
+                    "id": "output",
+                    "title": "NDVI output file",
+                    "output": {
+                        "formats": [{
+                                "mimeType": "application/octet-stream",
+                                "default": true
+                            }]
+                    }
+                }]
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [{
+            "href": "images.geomatys.com/ndvims:latest"
+        },
+        {
+            "href": "images.geomatys.com/ndvis:latest"
+        }],
+    "deploymentProfileName": "http://www.opengis.net/profiles/eoc/workflow"
+}

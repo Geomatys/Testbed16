@@ -1,0 +1,33 @@
+{
+    "inputs": [
+        {
+            "id": "image-s2",
+            "input": {
+                "format": {
+                    "mimeType": "image/tiff"
+                },
+                "value": {
+                    "href": "https://nexus.geomatys.com/repository/raw-public/testbed16/S2B_MSIL1C_20181105T062449_N0206_R091_T40KEC_20181105T093258.zip"
+                }
+            }
+        },{
+            "id": "files",
+            "input": {
+                "format": {
+                    "mimeType": "image/tiff"
+                },
+                "value": {
+                    "href": "https://nexus.geomatys.com/repository/raw-public/testbed16/S2B_MSIL1C_20181105T062449_N0206_R091_T40KED_20181105T093258.zip"
+                }
+            }
+        }
+    ],
+    "outputs": [
+        {
+            "id": "output",
+            "transmissionMode": "reference"
+        }
+    ],
+    "mode": "async",
+    "response": "document"
+}
