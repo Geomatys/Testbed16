@@ -1,0 +1,90 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "WorkflowWaterMasks",
+            "title": "WorkflowWaterMasks",
+            "owsContext": {
+                "offering": {
+                    "code": "http://www.opengis.net/eoc/applicationContext/cwl",
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/52N/WorkflowWaterMasks/WorkflowWaterMasks.cwl"
+                    }
+                }
+            },
+            "abstract": "TODO",
+            "keywords": ["WaterMasks"],
+            "inputs": [
+                {
+                    "id": "REQUEST_AREA",
+                    "title": "Area Of Interest",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "input": {
+                        "literalDataDomains": [{
+                                "dataType": {
+                                    "name": "String",
+                                    "reference": "http://www.w3.org/TR/xmlschema-2/#String"
+                                }
+                            }]
+                    }
+                },{
+                    "id": "START_DATE",
+                    "title": "start date",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "input": {
+                        "literalDataDomains": [{
+                                "dataType": {
+                                    "name": "String",
+                                    "reference": "http://www.w3.org/TR/xmlschema-2/#String"
+                                }
+                            }]
+                    }
+                },{
+                    "id": "END_DATE",
+                    "title": "end date",
+                    "minOccurs": "1",
+                    "maxOccurs": "1",
+                    "input": {
+                        "literalDataDomains": [{
+                                "dataType": {
+                                    "name": "String",
+                                    "reference": "http://www.w3.org/TR/xmlschema-2/#String"
+                                }
+                            }]
+                    }
+                }
+            ],
+            "outputs": [
+                {
+                    "id": "nb3_aggregated_floodmask",
+                    "title": "result image",
+                    "output": {
+                        "formats": [
+                            {
+                                "mimeType": "image/tiff",
+                                "default": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [{
+            "href": "images.geomatys.com/tb16/52n/workflow_water_masks_nb1request:latest"
+        },{
+            "href": "images.geomatys.com/tb16/52n/workflow_water_masks_nb2classify:latest"
+        },{
+            "href": "images.geomatys.com/tb16/52n/workflow_water_masks_nb3aggregate:latest"
+        }],
+    "deploymentProfileName": "http://www.opengis.net/profiles/eoc/dockerizedApplication"
+}
