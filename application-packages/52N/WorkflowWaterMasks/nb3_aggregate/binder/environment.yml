@@ -1,0 +1,16 @@
+name: tb16
+channels:
+  - conda-forge
+dependencies:
+  - ipykernel
+  - jupyter_client
+  - pip
+  - GDAL
+  - pip: 
+    - rasterio
+    - nteract-scrapbook
+    - papermill
+    - folium 
+    - shapely
+    - matplotlib
+    - scikit-image

@@ -1,0 +1,17 @@
+{
+    "floodmasks_geotiff": [
+        {
+            "location": "./input/result1.tif",
+            "class": "File"
+        },
+        {
+            "location": "./input/result2.tif",
+            "class": "File"
+        },
+        {
+            "location": "./input/result3.tif",
+            "class": "File"
+        }
+    ],
+    "REQUEST_AREA": "POLYGON ((6.2567138671875 51.57536261053028, 6.7160797119140625 51.57536261053028, 6.7160797119140625 51.78865666323309, 6.2567138671875 51.78865666323309, 6.2567138671875 51.57536261053028))"
+}
