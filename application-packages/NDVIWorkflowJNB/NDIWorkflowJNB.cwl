@@ -5,7 +5,7 @@ class: CommandLineTool
 hints:
   DockerRequirement:
     dockerPull: images.geomatys.com/tb16/ndviworkflowjnb:latest
-arguments: ["/home/guilhem/run.sh", "/home/guilhem/NDIWorkflowJNB.ipynb","./output.ipynb"]
+arguments: ["/home/guilhem/run.sh", "/home/guilhem/NDIWorkflowJNB.ipynb","/home/guilhem/out.ipynb"]
 inputs: 
   files:
     type:
@@ -19,5 +19,5 @@ inputs:
 outputs: 
   output:
     outputBinding:
-      glob: "./outputs/out.tif"
+      glob: "./outputs/*.tif"
     type: File

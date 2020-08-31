@@ -7,7 +7,7 @@
                 "offering": {
                     "code": "http://www.opengis.net/eoc/applicationContext/cwl",
                     "content": {
-                        "href": "https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIWorkflowJNB/NDVIWorkflowJNB.cwl"
+                        "href": "https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIWorkflowJNB/NDIWorkflowJNB.cwl"
                     }
                 }
             },
