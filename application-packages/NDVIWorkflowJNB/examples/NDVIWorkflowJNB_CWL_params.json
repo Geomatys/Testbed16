@@ -1,0 +1,11 @@
+{
+    "files": [
+        {
+            "location": "https://nexus.geomatys.com/repository/raw-public/testbed16/S2B_MSIL1C_20181105T062449_N0206_R091_T40KEC_20181105T093258.zip",
+            "class": "File"
+        },{
+            "location": "https://nexus.geomatys.com/repository/raw-public/testbed16/S2B_MSIL1C_20181105T062449_N0206_R091_T40KED_20181105T093258.zip",
+            "class": "File"
+        }
+    ]
+}

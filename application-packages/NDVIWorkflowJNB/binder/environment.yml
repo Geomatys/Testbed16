@@ -1,0 +1,19 @@
+name: base
+channels:
+  - defaults
+dependencies:
+  - conda
+  - python=3.7
+  - conda-env
+  - conda-build
+  - conda-verify
+  - anaconda-navigator
+  - navigator-updater
+  - gdal
+  - jupyter_client
+  - jupyterlab
+  - matplotlib
+  - pip
+  - pip:
+    - papermill
+

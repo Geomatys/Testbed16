@@ -1,0 +1,53 @@
+{
+    "processDescription": {
+        "process": {
+            "id": "NDVIWorkflowJNB",
+            "title": "Multi Sensor NDVI Workflow Jupyter Notebook",
+            "owsContext": {
+                "offering": {
+                    "code": "http://www.opengis.net/eoc/applicationContext/cwl",
+                    "content": {
+                        "href": "https://raw.githubusercontent.com/Geomatys/Testbed16/master/application-packages/NDVIWorkflowJNB/NDVIWorkflowJNB.cwl"
+                    }
+                }
+            },
+            "abstract": "Workflow Multi Sensor / NDVI Stacker in a juyter notebook",
+            "keywords": ["NDVI"],
+            "inputs": [{
+                    "id": "files",
+                    "title": "S2 Input Image",
+                    "input": {
+                        "formats": [{
+                                "mimeType": "application/zip",
+                                "default": true
+                            }]
+                    },
+                    "minOccurs": "1",
+                    "maxOccurs": "unbounded"
+                }
+            ],
+            "outputs": [{
+                    "id": "output",
+                    "title": "NDVI output file",
+                    "output": {
+                        "formats": [{
+                                "mimeType": "application/octet-stream",
+                                "default": true
+                            }]
+                    }
+                }]
+        },
+        "processVersion": "1.0.0",
+        "jobControlOptions": [
+            "async-execute"
+        ],
+        "outputTransmission": [
+            "reference"
+        ]
+    },
+    "immediateDeployment": true,
+    "executionUnit": [{
+            "href": "images.geomatys.com/tb16/ndviworkflowjnb:latest"
+        }],
+    "deploymentProfileName": "http://www.opengis.net/profiles/eoc/workflow"
+}
